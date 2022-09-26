@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 import planetLogo from '../images/3212580.png';
 
 const Navbar = () => (
@@ -8,12 +9,21 @@ const Navbar = () => (
       <h2>Space Travelers Hub</h2>
     </div>
     <ul className="nav-links">
-      <li><a href="/">Rockets</a></li>
-      <li><a href="/">Mission</a></li>
+      <CustomLink to="/">Rockets</CustomLink>
+      <CustomLink to="/mission">Mission</CustomLink>
       <li className="vertical-divider" />
-      <li><a href="/">My Profile</a></li>
+      <CustomLink to="/my-profile">My Profile</CustomLink>
     </ul>
   </nav>
 );
+
+const CustomLink = ({ to, children }) => {
+  const isActive = useMatch({ path: useResolvedPath(to).pathname, end: true });
+  return (
+    <li>
+      <Link className={isActive ? 'active-link' : ''} to={to}>{children}</Link>
+    </li>
+  );
+};
 
 export default Navbar;

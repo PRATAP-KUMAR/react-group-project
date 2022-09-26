@@ -20,7 +20,7 @@
   ],
   "plugins": ["react"],
   "rules": {
-    "react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": ["0", { "extensions": [".js", ".jsx"] }],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",

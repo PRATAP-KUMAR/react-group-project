@@ -10,6 +10,7 @@ const Navbar = () => (
     </div>
     <ul className="nav-links">
       <CustomLink to="/">Rockets</CustomLink>
+      <CustomLink to="/dragons">Dragons</CustomLink>
       <CustomLink to="/mission">Mission</CustomLink>
       <li className="vertical-divider" />
       <CustomLink to="/my-profile">My Profile</CustomLink>

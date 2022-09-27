@@ -1,7 +1,5 @@
 import React from 'react';
 
-const DragonsList = () => {
-  return <div>DragonsList</div>;
-};
+const DragonsList = () => <div>DragonsList</div>;
 
 export default DragonsList;

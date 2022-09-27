@@ -1,7 +1,14 @@
+import { useDispatch } from 'react-redux';
+import { bookRocket } from '../Redux/Rocket/RocketsRedux';
+
 const Rocket = (props) => {
+  const dispatch = useDispatch();
   const {
     id, name, description, img,
   } = props;
+  const reserveRocket = (id) => {
+    dispatch(bookRocket(id));
+  };
 
   return (
     <div id={id} className="rocket">
@@ -9,7 +16,7 @@ const Rocket = (props) => {
       <div className="rocket-content">
         <h2 className="rocket-name">{name}</h2>
         <p className="rocket-info">{description}</p>
-        <button type="button" className="reserve-btn">Reserve Rocket</button>
+        <button onClick={() => reserveRocket(id)} type="button" className="reserve-btn">Reserve Rocket</button>
       </div>
     </div>
   );

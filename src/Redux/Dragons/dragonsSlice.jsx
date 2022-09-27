@@ -13,7 +13,6 @@ export const fetchDragons = createAsyncThunk(
   'dragons/fetchDragons',
   async () => {
     try {
-
       const response = await axios.get(URL);
       return response.data;
     } catch (err) {
@@ -28,11 +27,9 @@ const dragonsSlice = createSlice({
   reducers: {
     dragonsReserved: {
       reducer(state, action) {
-        state.dragons.map((dragon) =>
-          dragon.id === action.payload.id
-            ? { ...dragon, reserved: true }
-            : dragon,
-        );
+        state.dragons.map((dragon) => (dragon.id === action.payload.id
+          ? { ...dragon, reserved: true }
+          : dragon));
       },
     },
   },

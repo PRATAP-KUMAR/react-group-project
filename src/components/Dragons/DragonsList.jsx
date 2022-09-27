@@ -17,5 +17,4 @@ const DragonsList = () => {
 
   return <div>DragonList</div>;
 };
-
 export default DragonsList;

@@ -1,17 +1,17 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import fetchRockets from '../Redux/Rocket/Rockets';
+const Rocket = (props) => {
+  const {
+    id, name, description, img,
+  } = props;
 
-const Rocket = () => {
-  const rockets = useSelector((state) => state.rocketReducer);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    if (rockets.length === 0) {
-      dispatch(fetchRockets());
-    }
-  }, [dispatch, rockets.length]);
   return (
-    <h2>Hi</h2>
+    <div id={id} className="rocket">
+      <img className="rocket-img" src={img} alt="Rocket" />
+      <div className="rocket-content">
+        <h2 className="rocket-name">{name}</h2>
+        <p className="rocket-info">{description}</p>
+        <button type="button" className="reserve-btn">Reserve Rocket</button>
+      </div>
+    </div>
   );
 };
 

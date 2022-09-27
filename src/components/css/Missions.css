@@ -1,8 +1,23 @@
 .missions-data {
+  display: flex;
   text-align: center;
-  margin-top: 2rem;
   color: #58e37b;
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1rem;
   background-color: azure;
+}
+
+.col-1 {
+  flex: 0.1;
+  border: 2px solid lightcoral;
+}
+
+.col-2 {
+  flex: 0.1;
+  border: 2px solid lightcoral;
+}
+
+.col-3 {
+  flex: 0.5;
+  border: 2px solid lightcoral;
 }

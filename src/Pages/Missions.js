@@ -8,17 +8,23 @@ const Missions = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // console.log("Before use effect");
     if (missionsData.length === 0) {
       dispatch(getMissionsFromAPIAction());
-      // console.log("Inside use effect");
     }
   }, [dispatch, missionsData.length]);
 
   const itemList = missionsData?.map((mission) => (
     <>
       <div className="missions-data">
-        {mission.mission_id}
+        <div className="col-1">
+          {mission.mission_id}
+        </div>
+        <div className="col-2">
+          {mission.mission_name}
+        </div>
+        <div className="col-3">
+          {mission.description}
+        </div>
       </div>
     </>
   ));

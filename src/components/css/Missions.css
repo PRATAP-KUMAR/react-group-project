@@ -1,29 +1,29 @@
 .missions-data {
-    display: flex;
-    text-align: center;
-    color: #58e37b;
-    font-style: italic;
-    font-size: 1rem;
-    background-color: azure;
-  }
-  
-  .col-1 {
-    flex: 0.1;
-    border: 2px solid lightcoral;
-  }
-  
-  .col-2 {
-    flex: 0.7;
-    border: 2px solid lightcoral;
-    text-align: left;
-  }
-  
-  .col-3 {
-    flex: 0.1;
-    border: 2px solid lightcoral;
-  }
-  
-  .col-4 {
-    flex: 0.1;
-    border: 2px solid lightcoral;
-  }
+  display: flex;
+  text-align: center;
+  color: #58e37b;
+  font-style: italic;
+  font-size: 1rem;
+  background-color: azure;
+}
+
+.col-1 {
+  flex: 0.1;
+  border: 2px solid lightcoral;
+}
+
+.col-2 {
+  flex: 0.7;
+  border: 2px solid lightcoral;
+  text-align: left;
+}
+
+.col-3 {
+  flex: 0.1;
+  border: 2px solid lightcoral;
+}
+
+.col-4 {
+  flex: 0.1;
+  border: 2px solid lightcoral;
+}

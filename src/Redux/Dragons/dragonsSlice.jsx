@@ -8,10 +8,12 @@ const initialState = {
 };
 
 const URL = 'https://api.spacexdata.com/v3/dragons';
+
 export const fetchDragons = createAsyncThunk(
   'dragons/fetchDragons',
   async () => {
     try {
+
       const response = await axios.get(URL);
       return response.data;
     } catch (err) {
@@ -41,7 +43,6 @@ const dragonsSlice = createSlice({
       })
       .addCase(fetchDragons.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        console.log(action.payload);
         state.dragons = action.payload;
       })
       .addCase(fetchDragons.rejected, (state, action) => {

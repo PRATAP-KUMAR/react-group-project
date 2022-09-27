@@ -34,7 +34,7 @@ const Missions = () => {
 
   return (
     <>
-      <div className="missions-data">
+      <div className="missions-data-header">
         <div className="col-1">
           Mission
         </div>
@@ -44,9 +44,7 @@ const Missions = () => {
         <div className="col-3">
           Status
         </div>
-        <div className="col-4">
-          Join/ Leave
-        </div>
+        <div className="col-4" />
       </div>
       <div>
         {itemList}

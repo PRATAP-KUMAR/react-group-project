@@ -1,29 +1,47 @@
+.missions-data-header {
+  display: flex;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #fafafa;
+  margin: 0 2rem;
+}
+
 .missions-data {
   display: flex;
-  text-align: center;
-  color: #58e37b;
-  font-style: italic;
+  text-align: left;
   font-size: 1rem;
-  background-color: azure;
+  background-color: #fafafa;
+  margin: 0 2rem;
 }
 
 .col-1 {
-  flex: 0.1;
-  border: 2px solid lightcoral;
+  flex: 0.15;
+  border: 2px solid #f1f1f1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.4rem;
 }
 
 .col-2 {
-  flex: 0.7;
-  border: 2px solid lightcoral;
+  flex: 0.65;
+  border: 2px solid #f1f1f1;
   text-align: left;
+  padding: 0.4rem;
 }
 
 .col-3 {
   flex: 0.1;
-  border: 2px solid lightcoral;
+  border: 2px solid #f1f1f1;
+  text-align: center;
 }
 
 .col-4 {
   flex: 0.1;
-  border: 2px solid lightcoral;
+  border: 2px solid #f1f1f1;
+  text-align: center;
+}
+
+.missions-data:nth-child(odd) {
+  background-color: #efefe9;
 }

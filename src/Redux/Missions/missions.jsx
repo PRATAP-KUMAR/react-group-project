@@ -10,7 +10,7 @@ const initialMissionsData = [];
 const MissionsDataReducer = (state = initialMissionsData, action) => {
   switch (action.type) {
     case GET_MISSIONS_DATA:
-      console.log(...action.payload);
+      // console.log(...action.payload);
       return [...action.payload];
     case JOIN_MISSION:
       return [
@@ -34,7 +34,7 @@ const MissionsDataReducer = (state = initialMissionsData, action) => {
 export const getMissionsFromAPIAction = () => (dispatch) => {
   axios.get(API).then((response) => {
     const missions = response.data;
-    console.log(missions);
+    // console.log(missions);
     dispatch({ type: GET_MISSIONS_DATA, payload: missions });
   });
 };

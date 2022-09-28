@@ -20,6 +20,7 @@ const Rockets = () => {
           name={rocket.rocket_name}
           description={rocket.description}
           img={rocket.flickr_images[0]}
+          reserved={rocket.reserved}
         />
       ))}
     </main>

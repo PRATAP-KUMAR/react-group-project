@@ -27,9 +27,10 @@ const dragonsSlice = createSlice({
   reducers: {
     dragonsReserved: {
       reducer(state, action) {
-        state.dragons = state.dragons.map((dragon) => ( 
-          dragon.id === action.payload.reserveId ? { ...dragon, reserved: !action.payload.reserved} :  dragon
-        ))
+        state.dragons = state.dragons.map((dragon) => (
+          dragon.id === action.payload.reserveId
+            ? { ...dragon, reserved: !action.payload.reserved } : dragon
+        ));
       },
     },
   },
@@ -40,11 +41,15 @@ const dragonsSlice = createSlice({
       })
       .addCase(fetchDragons.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        const loadedData = action.payload.map(payload => {
-          const {id, name, flickr_images, description} = payload
-          return {id, name, flickr_images, description, reserved: false}
-        })
-        state.dragons = [...loadedData]
+        const loadedData = action.payload.map((payload) => {
+          const {
+            id, name, flickr_images, description,
+          } = payload;
+          return {
+            id, name, flickr_images, description, reserved: false,
+          };
+        });
+        state.dragons = [...loadedData];
       })
       .addCase(fetchDragons.rejected, (state, action) => {
         state.status = 'failed';

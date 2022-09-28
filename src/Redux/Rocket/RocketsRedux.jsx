@@ -32,7 +32,6 @@ const rocketReducer = (state = initialState, action) => {
       return [
         ...state.map((rocket) => {
           if (rocket.rocket_id !== action.id) {
-            // console.log(rocket.rocket_id, action.id);
             return rocket;
           }
           return { ...rocket, reserved: true };
@@ -42,7 +41,6 @@ const rocketReducer = (state = initialState, action) => {
       return [
         ...state.map((rocket) => {
           if (rocket.rocket_id !== action.id) {
-            // console.log(rocket.rocket_id, action.id);
             return rocket;
           }
           return { ...rocket, reserved: false };

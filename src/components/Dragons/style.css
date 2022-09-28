@@ -80,7 +80,7 @@
 
 /* ------- Dragon Profile Section ---------- */
 
-.dragon__profile__container{
+.dragon__profile__container {
   width: 300px;
   margin: 0 auto;
 }
@@ -95,6 +95,6 @@
   overflow: hidden;
 }
 
-.dragon__profile__list{
+.dragon__profile__list {
   padding: 2rem 1rem;
 }

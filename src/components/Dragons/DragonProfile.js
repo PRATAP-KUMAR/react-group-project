@@ -19,9 +19,9 @@ const DragonProfile = () => {
                 dragon.length === 0
                   ? { border: 'none' }
                   : {
-                      borderBottom: 'solid 1px rgba(76, 75, 75, 0.5)',
-                      padding: '1rem 1rem',
-                    }
+                    borderBottom: 'solid 1px rgba(76, 75, 75, 0.5)',
+                    padding: '1rem 1rem',
+                  }
               }
             >
               {dragon.name}

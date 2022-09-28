@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissionsFromAPIAction, joinMissionAction, leaveMissionAction } from '../Redux/Missions/missions';
-import '../components/css/Missions.css';
+import './css/Missions.css';
 
 const Missions = () => {
   const missionsData = useSelector((state) => state.MissionsDataReducer);

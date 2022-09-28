@@ -30,6 +30,7 @@ const dragonsSlice = createSlice({
         state.dragons.map((dragon) => (dragon.id === action.payload.id
           ? { ...dragon, reserved: true }
           : dragon));
+        console.log(state.dragons)
       },
     },
   },
@@ -40,7 +41,11 @@ const dragonsSlice = createSlice({
       })
       .addCase(fetchDragons.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.dragons = action.payload;
+        const loadedData = action.payload.map(payload => {
+          const {id, name, flickr_images, description} = payload
+          return {id, name, flickr_images, description, reserved: false}
+        })
+        state.dragons = [...loadedData]
       })
       .addCase(fetchDragons.rejected, (state, action) => {
         state.status = 'failed';

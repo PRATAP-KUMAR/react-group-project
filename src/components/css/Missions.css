@@ -30,9 +30,8 @@
   padding: 0.4rem;
 }
 
-.col-3, 
-.col-4
-{
+.col-3,
+.col-4 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,11 +58,13 @@
 }
 
 .join-mission > button {
-  background: orange;
+  padding: 0.2rem;
+  border-radius: 0.25rem;
 }
 
 .leave-mission > button {
-  background: green;
+  padding: 0.2rem;
+  border-radius: 0.25rem;
 }
 
 .missions-data:nth-child(odd) {

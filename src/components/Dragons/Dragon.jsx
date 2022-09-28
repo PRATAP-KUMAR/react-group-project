@@ -1,41 +1,63 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { dragonsReserved } from '../../Redux/Dragons/dragonsSlice';
-import './style.css'
+import './style.css';
 
 const Dragon = ({ dragon }) => {
-
-  const [showReserved, setShowReserved] = useState(false);
   const dispatch = useDispatch();
+  const color = {
+    reserved: '#f66f1c',
+    calcelReserve: '#00c7b6',
+    reserveIndication: '#04a598',
+  };
 
   const handleReserve = () => {
-    setShowReserved(true);
-    console.log(showReserved)
-    dispatch(dragonsReserved({ reserveId: dragon.id }));
+    dispatch(
+      dragonsReserved({ reserveId: dragon.id, reserved: dragon.reserved }),
+    );
   };
-return (
-  <>
-    <li className="dragon__container">
-      <div className="dragon__wrapper">
-        <div className="dragon__image__container">
-          <img  src={dragon.flickr_images[0]} alt="dragon" />
+  return (
+    <>
+      <li className="dragon__container">
+        <div className="dragon__wrapper">
+          <div className="dragon__image__container">
+            <img src={dragon.flickr_images[0]} alt="dragon" />
+          </div>
+          <div className="dragon_description_container">
+            <h2 className="dragon__name">{dragon.name}</h2>
+            <p className="dragon__description">
+              {dragon.reserved && (
+                <span
+                  className="show__reserve__tag"
+                  style={{
+                    background: `${color.reserveIndication}`,
+                    paddingInline: '10px',
+                    borderRadius: '5px',
+                    marginRight: '10px',
+                  }}
+                >
+                  reserved
+                </span>
+              )}
+              {dragon.description}
+            </p>
+            <button
+              className="dragon__reserve__btn"
+              style={
+                dragon.reserved
+                  ? { background: `${color.reserved}` }
+                  : { background: `${color.calcelReserve}` }
+              }
+              type="button"
+              onClick={() => handleReserve()}
+            >
+              {dragon.reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
+            </button>
+          </div>
         </div>
-        <div className="dragon_description_container">
-          <h2 className="dragon__name">{dragon.name}</h2>
-          <p className="dragon__description">
-            {dragon.description}
-          </p>
-          <button
-            className="dragon__reserve__btn"
-            type="button"
-            onClick={() => handleReserve()}
-          >
-            Reserve Dragon
-          </button>
-        </div>
-      </div>
-    </li>
-  </>
-)};
+      </li>
+    </>
+  );
+};
 
 export default Dragon;

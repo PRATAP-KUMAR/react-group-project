@@ -5,10 +5,8 @@ import {
   getStatus,
   getError,
   fetchDragons,
-
 } from '../../Redux/Dragons/dragonsSlice';
 import Dragon from './Dragon';
-
 
 const DragonsList = () => {
   const dispatch = useDispatch();
@@ -22,7 +20,7 @@ const DragonsList = () => {
     }
   }, [status, dispatch]);
 
-let content;
+  let content;
 
   if (status === 'Loading') {
     content = <p>&quot,loading...&quot,</p>;

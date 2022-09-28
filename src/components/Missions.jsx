@@ -18,7 +18,6 @@ const Missions = () => {
   useEffect(() => {
     if (missionsData.length === 0) {
       dispatch(getMissionsFromAPIAction());
-      // console.log(missionsData[0]);
     }
   }, [dispatch, missionsData.length]);
 

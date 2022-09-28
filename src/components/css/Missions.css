@@ -30,6 +30,14 @@
   padding: 0.4rem;
 }
 
+.col-3, 
+.col-4
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .col-3 {
   flex: 0.1;
   border: 2px solid #f1f1f1;

@@ -43,12 +43,20 @@
   text-align: center;
 }
 
-.reserved {
-  color: orange;
+.reserved span {
+	background: #036565;
+	padding: 0.2rem;
+	border-radius: 0.5rem;
+	color: #fff;
+  font-size: 0.8rem;
 }
 
-.unreserved {
-  color: red;
+.unreserved span {
+	background: #41403f;
+	padding: 0.2rem;
+	border-radius: 0.5rem;
+	color: #fff;
+  font-size: 0.8rem;
 }
 
 .col-4 {
@@ -58,13 +66,17 @@
 }
 
 .join-mission > button {
-  padding: 0.2rem;
+  padding: 0.3rem;
   border-radius: 0.25rem;
+  color: red;
+  border: 2px solid red;
+  font-size: 1rem;
 }
 
 .leave-mission > button {
-  padding: 0.2rem;
+  padding: 0.4rem;
   border-radius: 0.25rem;
+  font-size: 1rem;
 }
 
 .missions-data:nth-child(odd) {

@@ -8,8 +8,8 @@ const Profile = () => {
   console.log(dragons);
   return (
     <div className="profile__container">
-      <SpaceProfile items={dragons} header={'My Dragons'} />
-      <SpaceProfile items={dragons} header={'My Rockets'} />
+      <SpaceProfile items={dragons} header="My Dragons" />
+      <SpaceProfile items={dragons} header="My Rockets" />
     </div>
   );
 };

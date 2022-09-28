@@ -30,16 +30,41 @@
   padding: 0.4rem;
 }
 
+.col-3,
+.col-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .col-3 {
   flex: 0.1;
   border: 2px solid #f1f1f1;
   text-align: center;
 }
 
+.reserved {
+  color: orange;
+}
+
+.unreserved {
+  color: red;
+}
+
 .col-4 {
   flex: 0.1;
   border: 2px solid #f1f1f1;
   text-align: center;
+}
+
+.join-mission > button {
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+}
+
+.leave-mission > button {
+  padding: 0.2rem;
+  border-radius: 0.25rem;
 }
 
 .missions-data:nth-child(odd) {

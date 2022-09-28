@@ -23,11 +23,11 @@ npm start
 ## Authors
 
 **Abel Gebeyehu**  
-GitHub: @AbelG101  
+GitHub: [@AbelG101](https://github.com/AbelG101)  
 LinkedIn: Abel Gebeyehu  
 
 **Sendy**  
-Github: @SendyIU  
+Github: [@uisendy](https://github.com/uisendy)  
 Twitter: @sinieke  
 LinkedIn: LinkedIn  
 

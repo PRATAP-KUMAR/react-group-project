@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: calc(14px + 0.390625vw);
+}
+
+body {
+  background-color: #f5f6fa;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  margin-right: 25px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: hsl(175, 100%, 32%);
+}
+
+.nav-links .vertical-divider {
+  border: 1px solid #666;
+  width: 1px;
+}
+
+.nav-links li .active-link {
+  text-decoration: underline;
+  color: #f66f1c;
+}
+
+.rockets-container {
+  padding: 0 80px;
+}
+
+.rocket {
+  display: flex;
+  margin-bottom: 30px;
+
+  /* border: 1px solid #000; */
+}
+
+.rocket-img {
+  min-width: 368px;
+  height: 268px;
+  margin-right: 35px;
+}
+
+.rocket-info {
+  line-height: 1.5;
+  padding: 10px 0;
+  font-size: 0.85rem;
+}
+
+.reserve-btn {
+  padding: 12px 16px;
+  background-color: #00b3a4;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.cancel-reservation-btn {
+  padding: 12px 16px;
+  border: 1px solid #6d757d;
+  color: #6d757d;
+  background-color: transparent;
+  border-radius: 5px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.reserve-btn:active {
+  background-color: #00c7b6;
+}
+
+.reserved-badge {
+  display: none;
+}
+
+.reserved-badge.active {
+  font-size: 0.7rem;
+  display: inline;
+  padding: 2px 7px;
+  border-radius: 7px;
+  background-color: #ffd54f;
+  color: #000;
+  margin-right: 10px;
+}
+
+/* ------- Profile Page ---------------- */
+
+.profile__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+}

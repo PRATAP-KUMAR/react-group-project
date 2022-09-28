@@ -1,0 +1,88 @@
+.missions-data-header {
+  display: flex;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #fafafa;
+  margin: 0 2rem;
+}
+
+.missions-data {
+  display: flex;
+  text-align: left;
+  font-size: 0.85rem;
+  background-color: #fafafa;
+  margin: 0 2rem;
+}
+
+.col-1 {
+  flex: 0.15;
+  border: 2px solid #f1f1f1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.4rem;
+}
+
+.col-2 {
+  flex: 0.65;
+  border: 2px solid #f1f1f1;
+  text-align: left;
+  padding: 0.8rem;
+  line-height: 1.5;
+}
+
+.col-3,
+.col-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-3 {
+  flex: 0.1;
+  border: 2px solid #f1f1f1;
+  text-align: center;
+}
+
+.reserved span {
+  background: #036565;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.unreserved span {
+  background: #5b5957;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.col-4 {
+  flex: 0.1;
+  border: 2px solid #f1f1f1;
+  text-align: center;
+}
+
+.join-mission > button {
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  color: red;
+  border: 2px solid red;
+  font-size: 0.8rem;
+  background-color: transparent;
+}
+
+.leave-mission > button {
+  padding: 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  background-color: transparent;
+  border: 2px solid hsl(0, 0%, 40%);
+}
+
+.missions-data:nth-child(odd) {
+  background-color: #f2f2ed;
+}

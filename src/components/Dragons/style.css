@@ -45,6 +45,10 @@
   cursor: pointer;
 }
 
+.dragon__reserve__btn.is-active {
+  background-color: #f66f1c;
+}
+
 .dragon__reserve__btn:hover {
   background-color: #00c7b6;
 }

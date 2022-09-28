@@ -27,10 +27,9 @@ const dragonsSlice = createSlice({
   reducers: {
     dragonsReserved: {
       reducer(state, action) {
-        state.dragons.map((dragon) => (dragon.id === action.payload.id
-          ? { ...dragon, reserved: true }
-          : dragon));
-        console.log(state.dragons)
+        state.dragons = state.dragons.map((dragon) => ( 
+          dragon.id === action.payload.reserveId ? { ...dragon, reserved: !action.payload.reserved} :  dragon
+        ))
       },
     },
   },

@@ -22,14 +22,14 @@ npm start
 
 ## Authors
 
-**Abel Gebeyehu**
-GitHub: @AbelG101
-LinkedIn: Abel Gebeyehu
+**Abel Gebeyehu**  
+GitHub: @AbelG101  
+LinkedIn: Abel Gebeyehu  
 
-**Sendy**
-Github: @SendyIU
-Twitter: @sinieke
-LinkedIn: LinkedIn
+**Sendy**  
+Github: @SendyIU  
+Twitter: @sinieke  
+LinkedIn: LinkedIn  
 
 **PRATAP PANABAKA**
 

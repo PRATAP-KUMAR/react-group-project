@@ -1,7 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { useDispatch } from 'react-redux';
+import { dragonsReserved } from '../../Redux/Dragons/dragonsSlice';
 import './style.css'
 
-const Dragon = ({ dragon }) => (
+const Dragon = ({ dragon }) => {
+
+  const [showReserved, setShowReserved] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleReserve = () => {
+    setShowReserved(true);
+    console.log(showReserved)
+    dispatch(dragonsReserved({ reserveId: dragon.id }));
+  };
+return (
   <>
     <li className="dragon__container">
       <div className="dragon__wrapper">
@@ -16,6 +28,7 @@ const Dragon = ({ dragon }) => (
           <button
             className="dragon__reserve__btn"
             type="button"
+            onClick={() => handleReserve()}
           >
             Reserve Dragon
           </button>
@@ -23,6 +36,6 @@ const Dragon = ({ dragon }) => (
       </div>
     </li>
   </>
-);
+)};
 
 export default Dragon;

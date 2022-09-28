@@ -100,3 +100,12 @@ a {
 .reserve-btn:active {
   background-color: #00c7b6;
 }
+
+/* ------- Profile Page ---------------- */
+
+.profile__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 2rem;
+  grid-row: 4rem;
+}

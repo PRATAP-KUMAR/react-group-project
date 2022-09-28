@@ -36,10 +36,26 @@
   text-align: center;
 }
 
+.reserved {
+  color: orange;
+}
+
+.unreserved {
+  color: red;
+}
+
 .col-4 {
   flex: 0.1;
   border: 2px solid #f1f1f1;
   text-align: center;
+}
+
+.join-mission > button {
+  background: orange;
+}
+
+.leave-mission > button {
+  background: green;
 }
 
 .missions-data:nth-child(odd) {

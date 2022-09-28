@@ -1,14 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import './style.css';
-
-const Dragon = ({ dragon }) => (
-  <>
-    <li className="dragon__container">
-      <div className="dragon__wrapper">
-        <div className="dragon__image__container">
-          <img src={dragon.flickr_images[0]} alt="dragon" />
-=======
 import { useDispatch } from 'react-redux';
 import { dragonsReserved } from '../../Redux/Dragons/dragonsSlice';
 import './style.css';
@@ -64,7 +54,6 @@ const Dragon = ({ dragon }) => {
               {dragon.reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
             </button>
           </div>
->>>>>>> 8c80e187bbad3befa9adfd964097acc6bc855ad7
         </div>
       </li>
     </>

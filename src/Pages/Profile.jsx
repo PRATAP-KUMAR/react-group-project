@@ -1,5 +1,10 @@
+import DragonProfile from "../components/Dragons/DragonProfile";
+
 const Profile = () => (
-  <h1>Profile</h1>
+  <div className="profile__container">
+    <DragonProfile/>
+  </div>
+
 );
 
 export default Profile;

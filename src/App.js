@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MissionsPage from './Pages/MissionsPage';
 import Profile from './Pages/Profile';
-import Dragons from './Pages/Dragons/Dragons';
+import DragonsPage from './Pages/Dragons/DragonsPage';
 import NotFound from './Pages/ErrorPage/NotFound';
 import Rockets from './components/Rockets';
 

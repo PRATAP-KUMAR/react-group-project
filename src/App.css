@@ -124,3 +124,12 @@ a {
   color: #000;
   margin-right: 10px;
 }
+
+/* ------- Profile Page ---------------- */
+
+.profile__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+}

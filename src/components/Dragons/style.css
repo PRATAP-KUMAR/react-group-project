@@ -76,3 +76,24 @@
     padding-top: 0;
   }
 }
+
+/* ------- Dragon Profile Section ---------- */
+
+.space__profile__container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.space__profile__heading {
+  margin-bottom: 1rem;
+}
+
+.space__profile__list__wrapper {
+  border: 1px solid rgba(76, 75, 75, 0.5);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.space__profile__list {
+  padding: 2rem 1rem;
+}

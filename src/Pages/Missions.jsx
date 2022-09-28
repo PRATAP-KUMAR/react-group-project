@@ -32,16 +32,16 @@ const Missions = () => {
         <div className="col-2">
           {mission.description}
         </div>
-        <div className={mission.reserved === true ? 'col-3 reserved' : 'col-3 unreserved'}>
-          {mission.reserved === true ? 'Active Member' : 'Not a Member'}
+        <div className={mission.reserved ? 'col-3 reserved' : 'col-3 unreserved'}>
+          {mission.reserved ? 'Active Member' : 'Not a Member'}
         </div>
-        <div className={mission.reserved === true ? 'col-4 join-mission' : 'col-4 leave-mission'}>
+        <div className={mission.reserved ? 'col-4 join-mission' : 'col-4 leave-mission'}>
           <button
             type="submit"
             id={mission.mission_id}
             onClick={handleButtonClickAction}
           >
-            {mission.reserved === true ? 'Leave Mission' : 'Join Mission'}
+            {mission.reserved ? 'Leave Mission' : 'Join Mission'}
           </button>
         </div>
       </div>

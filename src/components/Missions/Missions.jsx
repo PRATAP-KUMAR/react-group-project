@@ -1,36 +1,17 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMissionsFromAPIAction } from '../Redux/Missions/missions';
-import '../components/css/Missions.css';
+import { getMissionsFromAPIAction } from '../../Redux/Missions/missions';
+import Mission from './Mission';
+import '../css/Missions.css';
 
 const Missions = () => {
   const missionsData = useSelector((state) => state.MissionsDataReducer);
   const dispatch = useDispatch();
-
   useEffect(() => {
     if (missionsData.length === 0) {
       dispatch(getMissionsFromAPIAction());
     }
   }, [dispatch, missionsData.length]);
-
-  const itemList = missionsData.map((mission) => (
-    <>
-      <div className="missions-data">
-        <div className="col-1">
-          {mission.mission_name}
-        </div>
-        <div className="col-2">
-          {mission.description}
-        </div>
-        <div className="col-3">
-          status
-        </div>
-        <div className="col-4">
-          Join/Leave
-        </div>
-      </div>
-    </>
-  ));
 
   return (
     <>
@@ -47,11 +28,17 @@ const Missions = () => {
         <div className="col-4" />
       </div>
       <div>
-        {itemList}
+        {missionsData.map((mission) => (
+          <Mission
+            key={mission.mission_id}
+            missionId={mission.mission_id}
+            missionName={mission.mission_name}
+            description={mission.description}
+            reserved={mission.reserved}
+          />
+        ))}
       </div>
-
     </>
   );
 };
-
 export default Missions;

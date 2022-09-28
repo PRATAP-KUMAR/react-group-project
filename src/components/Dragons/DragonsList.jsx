@@ -5,7 +5,6 @@ import {
   getStatus,
   getError,
   fetchDragons,
-
 } from '../../Redux/Dragons/dragonsSlice';
 import Dragon from './Dragon';
 

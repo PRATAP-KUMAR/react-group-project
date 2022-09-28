@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissionsFromAPIAction } from '../../Redux/Missions/missions';
 import Mission from './Mission';
-import '../css/Missions.css';
+import MissionHeader from './MissionHeader';
 
 const Missions = () => {
   const missionsData = useSelector((state) => state.MissionsDataReducer);
@@ -15,18 +15,7 @@ const Missions = () => {
 
   return (
     <>
-      <div className="missions-data-header">
-        <div className="col-1">
-          Mission
-        </div>
-        <div className="col-2">
-          Description
-        </div>
-        <div className="col-3">
-          Status
-        </div>
-        <div className="col-4" />
-      </div>
+      <MissionHeader />
       <div>
         {missionsData.map((mission) => (
           <Mission

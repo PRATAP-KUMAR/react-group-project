@@ -1,7 +1,7 @@
 import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { joinMissionAction, leaveMissionAction } from '../../Redux/Missions/missions';
-import '../css/Missions.css';
+import './Missions.css';
 
 const Mission = (props) => {
   const {
@@ -26,7 +26,9 @@ const Mission = (props) => {
           {description}
         </div>
         <div className={reserved ? 'col-3 reserved' : 'col-3 unreserved'}>
-          {reserved ? 'Active Member' : 'Not a Member'}
+          <span>
+            {reserved ? 'Active Member' : 'Not a Member'}
+          </span>
         </div>
         <div className={reserved ? 'col-4 join-mission' : 'col-4 leave-mission'}>
           <button

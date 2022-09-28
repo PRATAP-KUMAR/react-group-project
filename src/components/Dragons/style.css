@@ -31,7 +31,7 @@
 }
 
 .dragon__description {
-  font-size: 1rem;
+  font-size: 0.85rem;
   padding-bottom: 0.5rem;
 }
 
@@ -46,15 +46,19 @@
 }
 
 .dragon__reserve__btn.is-active {
-  background-color: #f66f1c;
+  border: 1px solid #6d757d;
+  color: #6d757d;
+  background-color: transparent;
 }
 
-.dragon__reserve__btn:hover {
-  background-color: #00c7b6;
-}
-
-.dragon__reserve__btn:active {
-  background-color: #00c7b6;
+.show__reserve__tag {
+  font-size: 0.7rem;
+  display: inline;
+  padding: 2px 7px;
+  border-radius: 7px;
+  background-color: #ffd54f;
+  color: #000;
+  margin-right: 10px;
 }
 
 @media (min-width: 768px) {
@@ -89,11 +93,14 @@
 }
 
 .space__profile__list__wrapper {
-  border: 1px solid rgba(76, 75, 75, 0.5);
-  border-radius: 0.5rem;
+  border: 1px solid #d3d3d3;
   overflow: hidden;
 }
 
 .space__profile__list {
-  padding: 2rem 1rem;
+  padding: 1rem 0.7rem;
+}
+
+.space__profile__list:not(:last-child) {
+  border-bottom: 1px solid #d3d3d3;
 }

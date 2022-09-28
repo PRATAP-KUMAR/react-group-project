@@ -5,11 +5,6 @@ import './style.css';
 
 const Dragon = ({ dragon }) => {
   const dispatch = useDispatch();
-  const color = {
-    reserved: '#f66f1c',
-    calcelReserve: '#00c7b6',
-    reserveIndication: '#04a598',
-  };
 
   const handleReserve = () => {
     dispatch(
@@ -27,27 +22,14 @@ const Dragon = ({ dragon }) => {
             <h2 className="dragon__name">{dragon.name}</h2>
             <p className="dragon__description">
               {dragon.reserved && (
-                <span
-                  className="show__reserve__tag"
-                  style={{
-                    background: `${color.reserveIndication}`,
-                    paddingInline: '10px',
-                    borderRadius: '5px',
-                    marginRight: '10px',
-                  }}
-                >
+                <span className="show__reserve__tag">
                   reserved
                 </span>
               )}
               {dragon.description}
             </p>
             <button
-              className="dragon__reserve__btn"
-              style={
-                dragon.reserved
-                  ? { background: `${color.reserved}` }
-                  : { background: `${color.calcelReserve}` }
-              }
+              className={dragon.reserved ? 'dragon__reserve__btn is-active' : 'dragon__reserve__btn'}
               type="button"
               onClick={() => handleReserve()}
             >

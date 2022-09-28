@@ -11,7 +11,7 @@ const Navbar = () => (
     <ul className="nav-links">
       <CustomLink to="/">Rockets</CustomLink>
       <CustomLink to="/dragons">Dragons</CustomLink>
-      <CustomLink to="/mission">Mission</CustomLink>
+      <CustomLink to="/mission">Missions</CustomLink>
       <li className="vertical-divider" />
       <CustomLink to="/my-profile">My Profile</CustomLink>
     </ul>
